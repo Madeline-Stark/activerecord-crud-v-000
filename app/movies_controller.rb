@@ -29,7 +29,7 @@ def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
   # release_date == 1990
 
   Movie.create do |m|
-    m.each {|key, value| 
+    m.each {|key, value|
       self.send(("#{key}="), value)}
     end
   end
@@ -48,7 +48,7 @@ def can_get_size_of_the_database
 end
 
 def can_find_the_first_item_from_the_database_using_id
-  __
+  item = Movie.find(1)
 end
 
 def can_find_by_multiple_attributes
