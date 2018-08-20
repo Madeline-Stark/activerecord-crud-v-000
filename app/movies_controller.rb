@@ -40,7 +40,7 @@ def can_get_the_first_item_in_the_database
 end
 
 def can_get_the_last_item_in_the_database
-  movie = Movie.last 
+  movie = Movie.last
 end
 
 def can_get_size_of_the_database
@@ -48,15 +48,13 @@ def can_get_size_of_the_database
 end
 
 def can_find_the_first_item_from_the_database_using_id
-  item = Movie.find(1)
+  movie = Movie.find(1)
 end
 
 def can_find_by_multiple_attributes
-  # Search Values:
-  # title == "Title"
-  # release_date == 2000
-  # director == "Me"
-  __
+  Movie.find_by title: "Title"
+  Movie.find_by release_date: 2000
+  Movie.find_by director: "Me"
 end
 
 def can_find_using_where_clause_and_be_sorted
