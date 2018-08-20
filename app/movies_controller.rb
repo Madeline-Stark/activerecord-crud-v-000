@@ -42,7 +42,7 @@ def can_get_the_last_item_in_the_database
 end
 
 def can_get_size_of_the_database
-  __
+  Movie.all.size
 end
 
 def can_find_the_first_item_from_the_database_using_id
@@ -78,7 +78,6 @@ def can_update_multiple_items_at_once
     movie = Movie.create(title: "Movie_#{i}", release_date: 2000+i)
     movie.update(title: "A Movie")
   end
-  __
 end
 
 def can_destroy_a_single_item
@@ -91,5 +90,5 @@ def can_destroy_all_items_at_once
   10.times do |i|
     Movie.create(title: "Movie_#{i}")
   end
-  __
+  Movie.destroy_all
 end
