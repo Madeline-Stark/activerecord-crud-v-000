@@ -29,7 +29,9 @@ def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
   # release_date == 1990
 
   Movie.create do |m|
-    __
+    m.each {|key, value| 
+      self.send(("#{key}="), value)}
+    end
   end
 end
 
